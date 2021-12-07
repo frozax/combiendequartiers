@@ -1,90 +1,47 @@
 import './App.css';
-import { Table, Container, Row, } from 'react-bootstrap';
-import { CDQForm } from './Form.js';
+import React, { Component } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { CDQForm } from './CDQForm';
+import { TableLatest } from './TableLatest';
+import { TableCount } from './TableCount';
 
-function App() {
+export default class App extends Component {
 
+    render() {
+        return (
+            <Container>
 
-  return (
-    <Container>
+                <h1 className="center">Combien de Quartiers ?</h1>
+                <Row className="text-center">
+                    <Col className="center">
+                        <CDQForm />
+                    </Col>
+                </Row>
 
-<Container>
-  <CDQForm />
-</Container>
+                <Row className="align-items-top pt-5">
+                    <Col className="align-items-top">
+                        <TableLatest count="5" />
+                    </Col>
+                    <Col className="align-items-top">
+                        <TableCount />
+                    </Col>
+                </Row>
 
+                <Row className="center">
+                        <h3 className="pt-5">Statistiques</h3>
+                        <p>Les statistiques arrivent bientôt!</p>
+                </Row>
 
+                <Row>
+                    <footer className="page-footer font-xsmall blue pt-4">
+                        <div className="footer-copyright text-center py-3">
+                            Sponsor: <a href="https://frozax.com/">Frozax Games</a><br />
+                            <a href="https://twitter.com/CDeQuartiers">Contact</a>
+                        </div>
+                    </footer>
+                </Row>
 
-
-  <Row className="justify-content-md-center">
-    <Table striped bordered hover size="sm">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Fruit</th>
-          <th>Quartiers</th>
-          <th>Origine</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Citron</td>
-          <td>10</td>
-          <td>Inconnue</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Clémentine</td>
-          <td>9</td>
-          <td>Corse</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Clémentine</td>
-          <td>10</td>
-          <td>Espagne</td>
-        </tr>
-      </tbody>
-    </Table>
-  </Row>
-
-    </Container>
-  )
-/*  return (
-    <App>
-
-
-</App>
-  )*/
-/*  return (
-    <div className="App">
-
-  <main class="px-5">
-      <p>J'ai mangé </p>
-      <p>Il y avait  quartiers.</p>
-      <p>Origine (optionnel): </p>
-    <h1>Cover your page.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white">Learn more</a>
-    </p>
-  </main>
-
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );*/
+            </Container>
+        )
+    }
 }
-
-export default App;
