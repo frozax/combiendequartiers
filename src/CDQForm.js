@@ -21,16 +21,12 @@ export class CDQForm extends Component {
         this.locations_select = Locations.map((location) => (
             { value: location.id, label: location.flag + "|" + location.name }
         ));
-
-        this.fruit_ref = createRef();
-        this.quartiers_ref = createRef();
     }
 
     handleSubmit(event) {
         event.preventDefault();
         AddToDb(this.state.fruit_id, this.state.quartiers, "");
         this._setStatus("sent");
-        //this.props.db_refs.forEach( db_ref => db_ref.current.callDb() );
     };
 
     _setStatus(status) {
@@ -88,7 +84,7 @@ export class CDQForm extends Component {
             var input_number = (
                 <Select aria-label="Floating label select example"
                     required
-                    ref={this.quartiers_ref}
+                    isSearchable={false}
                     name="quartiers"
                     options={numbers}
                     onChange={(e) => { this.setQuartiers(e.value); }}
@@ -117,9 +113,9 @@ export class CDQForm extends Component {
                         <Col sm="auto">
                             <Select aria-label="Floating label select example"
                                 required
+                                isSearchable={false}
                                 name="fruit_id"
                                 styles={styles}
-                                ref={this.fruit_ref}
                                 options={this.fruits_select}
                                 onChange={(e) => { this.setFruit(e.value); }}
                                 placeholder="un fruit..." />
