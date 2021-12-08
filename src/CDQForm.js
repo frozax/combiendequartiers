@@ -1,4 +1,4 @@
-import React, { Component, createRef } from 'react';
+import React, { Component } from 'react';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 import Select from 'react-select'
 import { Fruits, Locations } from './Data.js'

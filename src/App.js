@@ -10,15 +10,16 @@ export default class App extends Component {
     render() {
         return (
             <Container>
-
-                <h1 className="center">Combien de Quartiers ?</h1>
-                <Row className="text-center">
+                <Row className="text-center bg-cdq2">
+                <h1>Combien de Quartiers ?</h1>
+                </Row>
+                <Row className="text-center bg-cdq">
                     <Col className="center">
                         <CDQForm />
                     </Col>
                 </Row>
 
-                <Row className="align-items-top pt-5">
+                <Row className="align-items-top pt-5 bg-cdq2">
                     <Col className="align-items-top">
                         <TableLatest count="5" />
                     </Col>
@@ -27,7 +28,7 @@ export default class App extends Component {
                     </Col>
                 </Row>
 
-                <Row className="center">
+                <Row className="center bg-cdq">
                         <h3 className="pt-5">Statistiques</h3>
                         <p>Les statistiques arrivent bientôt!</p>
                 </Row>

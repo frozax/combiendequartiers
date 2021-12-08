@@ -4,6 +4,7 @@
     {id: "man", article: "une", name: "mandarine", emoji: "🍊"},
     {id: "ora", article: "une", name: "orange", emoji: "🍊"},
     {id: "cit", article: "un", name: "citron", emoji: "🍋"},
+    {id: "civ", article: "un", name: "citron vert", emoji: ""},
     {id: "par", article: "un", name: "pamplemousse rose", emoji: ""},
     {id: "paj", article: "un", name: "pamplemousse jaune", emoji: ""},
   ];
