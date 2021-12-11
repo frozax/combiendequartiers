@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { onValue, getDatabase, ref, push, set, serverTimestamp, orderByChild, limitToLast, query } from "firebase/database";
+import { startAt, endAt, onValue, getDatabase, ref, push, set, serverTimestamp, orderByChild, limitToLast, query } from "firebase/database";
 import { FirebaseConfig } from "./FirebaseCreds.js"
 
 // Initialize Firebase
@@ -35,5 +35,13 @@ export const GetLatest = (count, cbk) => {
 export const GetCount = (cbk) => {
     const entriesRef = ref(db, ENTRIES_NAME);
     const queryQ = query(entriesRef);
+    return onValue(queryQ, cbk)
+}
+
+// returns quartiers per fruit
+export const GetRepartition = (fruit_id, cbk) => {
+    const entriesRef = ref(db, ENTRIES_NAME);
+    const queryConstraints = [orderByChild("fruit_id"), startAt(fruit_id), endAt(fruit_id)];
+    const queryQ = query(entriesRef, ...queryConstraints);
     return onValue(queryQ, cbk)
 }

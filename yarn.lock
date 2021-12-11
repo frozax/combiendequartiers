@@ -8862,6 +8862,11 @@ pkg-up@3.1.0:
   dependencies:
     find-up "^3.0.0"
 
+plotly.js-basic-dist-min@^2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/plotly.js-basic-dist-min/-/plotly.js-basic-dist-min-2.8.0.tgz#46838134b9fb072b6260a77f2ce54fb2646be160"
+  integrity sha512-tvLrjfnmEggvE05bRjbZowjWi8tHQErDWcEDZyvYGUJb/bLR2WbrE88IMC99clbnaaG9LSs9moIbDhj+c5QSlw==
+
 pnp-webpack-plugin@1.6.4:
   version "1.6.4"
   resolved "https://registry.yarnpkg.com/pnp-webpack-plugin/-/pnp-webpack-plugin-1.6.4.tgz#c9711ac4dc48a685dabafc86f8b6dd9f8df84149"
@@ -9929,6 +9934,13 @@ react-numeric-input@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/react-numeric-input/-/react-numeric-input-2.2.3.tgz#4bf5918c3eafed851a80df1eb992d941002bb552"
   integrity sha1-S/WRjD6v7YUagN8euZLZQQArtVI=
+
+react-plotly.js@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/react-plotly.js/-/react-plotly.js-2.5.1.tgz#11182bf599ef11a0dbfcd171c6f5645535a2b486"
+  integrity sha512-Oya14whSHvPsYXdI0nHOGs1pZhMzV2edV7HAW1xFHD58Y73m/LbG2Encvyz1tztL0vfjph0JNhiwO8cGBJnlhg==
+  dependencies:
+    prop-types "^15.7.2"
 
 react-refresh@^0.8.3:
   version "0.8.3"

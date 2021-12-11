@@ -25,3 +25,9 @@
 .App-link {
   color: #61dafb;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

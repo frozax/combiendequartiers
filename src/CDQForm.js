@@ -27,6 +27,9 @@ export class CDQForm extends Component {
         event.preventDefault();
         AddToDb(this.state.fruit_id, this.state.quartiers, "");
         this._setStatus("sent");
+        if(this.props.chart_ref.current) {
+            this.props.chart_ref.current.setFruit(this.state.fruit_id);
+        }
     };
 
     _setStatus(status) {
@@ -75,6 +78,7 @@ export class CDQForm extends Component {
     render() {
 
         var row_class = "center m-2";
+        var form_class = "p-2";
 
         if (this.state.status === "form") {
             var is_valid = this._isValid();
@@ -105,7 +109,7 @@ export class CDQForm extends Component {
             };
 
             return (
-                <Form noValidate onSubmit={submit_main}>
+                <Form noValidate onSubmit={submit_main} className={form_class}>
                     <Row className={row_class}>
                         <Form.Label column sm="auto">
                             J'ai mangé
@@ -151,7 +155,7 @@ export class CDQForm extends Component {
                 this._setStatus("form");
             }
             return (
-                <Form noValidate onSubmit={submit_resend}>
+                <Form noValidate onSubmit={submit_resend} className={form_class}>
                     <Row className={row_class}>
                         <Form.Label column sm="auto">
                             Merci !
