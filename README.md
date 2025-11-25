@@ -1,3 +1,7 @@
-# combiendequartiers.com
+# Combien de Quartiers ?
 
-Feel free to create PRs!
+If yarn doesn't work locally, use `set NODE_OPTIONS=--openssl-legacy-provider`
+
+Install dependencies: `yarn install`
+Start the dev server: `yarn start`
+Generate the site: `yarn build`
