@@ -121,7 +121,7 @@ export class ChartQuartiers extends React.Component {
                         },
                         yaxis: {
                             title: "fruits",
-                            dtick: 1
+                            tickmode: "auto"
                         }
                     }}
                     useResizeHandler={true}
