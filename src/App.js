@@ -43,7 +43,7 @@ export default class App extends Component {
                 <Row>
                     <footer className="page-footer font-xsmall blue pt-4">
                         <div className="footer-copyright text-center py-3">
-                            Sponsor: <a href="https://frozax.com/">Frozax Games</a><br />
+                            Sponsors: <a href="https://frozax.com/">Frozax Games</a> - <a href="https://padel4padel.com">PADEL4PADEL</a><br />
                             <a href="https://twitter.com/CDeQuartiers">Contact (Twitter)</a> - <a href="https://github.com/frozax/combiendequartiers">Contribute (Github)</a>
                         </div>
                     </footer>
